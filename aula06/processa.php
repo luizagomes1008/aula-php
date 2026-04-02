@@ -15,9 +15,7 @@
         }
         else {
             //voltou ao formulario
-                    
-                    header('Location: index.html?nome='. $nome);
-                    //header('Location: formulario.php');
+             header('Location: erro.php');
 
         }
 
