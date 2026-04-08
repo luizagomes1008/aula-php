@@ -86,6 +86,11 @@
   box-sizing: border-box;
 }
 
+button.btn.erro.btn-primary{
+   display: block;
+  margin: 0 auto;
+}
+
 table.table{
   font-size: large;
       --bs-table-color:var(--bs-dropdown-bg);
