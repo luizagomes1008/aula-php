@@ -15,7 +15,7 @@
         }
         else {
             //voltou ao formulario
-             header('Location: erro.php');
+             header('Location: /aula06/template/erro.php');
 
         }
 

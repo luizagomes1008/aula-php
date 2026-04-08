@@ -1,7 +1,3 @@
-<?php 
-    $nome= $_GET['nome']
-
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,7 +10,7 @@
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
-        <link href="/aula06/template/css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -27,9 +23,10 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/aula06/template/guia.html">Guia</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/aula06/template/galeria.html">Clássicos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/aula06/template/formulario.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="guia.html">Guia</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="galeria.html">Clássicos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="formulario.php">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,46 +35,40 @@
         <header class="masthead text-center text-white">
             <div class="masthead-content">
                 <div class="container px-5">
-                    <h1 class="masthead-heading mb-0">bem vindo <?php echo $nome; ?> a sua area restrita</p></h1>
+                    <h1 class="masthead-heading mb-0">Erro!</h1>
                     
                 
                 </div>
             </div>
-           
         </header>
-        <h2 class="display-4 text-center">Seu histórico de leitura</h2>
-        <!-- On tables -->
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">.</th>
-      <th scope="col">livro</th>
-      <th scope="col">tempo que leu</th>
-      <th scope="col">nota final</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">janeiro</th>
-      <td>Saboroso Cadáver</td>
-      <td>3 semanas</td>
-      <td>7/10</td>
-    </tr>
-    <tr>
-      <th scope="row">fevereiro</th>
-      <td>A metamorfóse</td>
-      <td>2 dias</td>
-      <td>9/10</td>
-    </tr>
-    <tr>
-      <th scope="row">março</th>
-      <td>drácula</td>
-      <td>2 semanas</td>
-      <td>9/10</td>
-    </tr>
-  </tbody>
-</table>
- 
+
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Entenda o que aconteceu
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+       
+    
+  
         <!-- Footer-->
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Your Website 2023</p></div>
@@ -88,3 +79,5 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
+
+
