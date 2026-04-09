@@ -1,2 +1,0 @@
-
-alert('ta errado pae')
