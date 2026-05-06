@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>atividade luiza gomes</title>
+    <!-- prof, usei IA para me ajudar na lista, acabei me enrolando na sintaxe de alguns ex... -->
 
-<!-- EX 1 -- TABELA -->
+
      <style>
         .par {
-            background-color: pink;
+            background-color: lightblue;
 
         
         }
@@ -16,24 +17,33 @@
             background-color: blue;
         }
 
-       .alimento { 
-        background-color: lightgreen; 
+       .livro { 
+        background-color: yellow; 
         }
 
-        .eletronico {
+        .mensalidade {
              background-color: lightblue;
          }
 
         .roupa { 
             background-color: pink;
          }
+        
+        h1{
+            background-color:  pink;
+        }
+        body{
+            background-color: #DADBF5 ;
+        }
+        
+        
 
     </style>
 </head>
 <body>
+    <!-- EX 1 -- TABELA -->
     <h1>tabela par e impar</h1>
     <table>
-        <!-- cabeçario -->
         <tr>
             <td>titulo</td>
             <td>titulo</td>
@@ -60,27 +70,42 @@
     </table>
 
 
+<!-- EX 3  TABELA USER -->
+<h1>Tabela Usuario</h1>
+
+<?php
+echo '<form method="POST">
+    <input type="number" name="linhas" placeholder="Digite as linhas">
+    <input type="number" name="colunas" placeholder="Digite as colunas">
+    <button type="submit">Gerar</button>
+</form>';
+    $linhas = $_POST["linhas"];
+    $colunas = $_POST["colunas"];
+
+    echo "<table>";
+
+    for ($i = 0; $i < $linhas; $i++) {
+        echo "<tr>";
+
+        for ($j = 0; $j < $colunas; $j++) {
+            echo "<td>linha $i Coluna $j</td>";
+        }
+
+        echo "</tr>";
+    }
+
+    echo "</table>";
 
 
-<!-- EX 2 -- TABELA, nao consegui fazer... -->
-  <h1>tabela usuario</h1>
-   <form method="POST" action="">
-    Linhas: <input type="number" name="linhas">
-    Colunas: <input type="number" name="colunas">
-    <button type="submit">Gerar tabela</button>   
-    </form>
+?>
 
-
-
-</table>
-
-<!-- EX 3 -- TABELA-->
+<!-- EX 3 -- TABELA array-->
  <h1>tabela array</h1>
 <?php
 $produtos = [
-    ["nome" => "Arroz", "preco" => 10, "categoria" => "Alimento"],
-    ["nome" => "Mouse", "preco" => 50, "categoria" => "Eletrônico"],
-    ["nome" => "Camiseta", "preco" => 30, "categoria" => "Roupa"]
+    ["nome" => "livro", "preco" => 80, "categoria" => "livro"],
+    ["nome" => "mensalidade facul", "preco" => 7000, "categoria" => "mensalidade"],
+    ["nome" => "roupinhas da shein", "preco" => 560, "categoria" => "Roupa"]
 ];
 
 echo "<table>";
@@ -92,10 +117,10 @@ echo "<tr>
 
 foreach ($produtos as $p) {
 
-    if ($p["categoria"] == "Alimento") {
-        $classe = "alimento";
-    } elseif ($p["categoria"] == "Eletrônico") {
-        $classe = "eletronico";
+    if ($p["categoria"] == "livro") {
+        $classe = "livro";
+    } elseif ($p["categoria"] == "mensalidade") {
+        $classe = "mensalidade";
     } else {
         $classe = "roupa";
     }
