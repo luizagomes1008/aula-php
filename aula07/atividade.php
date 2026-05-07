@@ -10,6 +10,7 @@
      <style>
         .par {
             background-color: lightblue;
+            border-color: black
 
         
         }
@@ -25,7 +26,7 @@
              background-color: lightblue;
          }
 
-        .roupa { 
+        .Roupa { 
             background-color: pink;
          }
         
@@ -113,23 +114,25 @@ echo "<tr>
         <th>Nome</th>
         <th>Preço</th>
         <th>Categoria</th>
-      </tr>";
+        </tr>";
 
 foreach ($produtos as $p) {
 
-    if ($p["categoria"] == "livro") {
-        $classe = "livro";
-    } elseif ($p["categoria"] == "mensalidade") {
-        $classe = "mensalidade";
-    } else {
-        $classe = "roupa";
-    }
+    $classe = $p['categoria'] ;
+    
+    //  if ($p["categoria"] == "livro") {
+    //      $classe = "livro";
+    //  } elseif ($p["categoria"] == "mensalidade") {
+    //      $classe = "mensalidade";
+    //  } else {
+    //      $classe = "roupa";
+    //  }
 
-    echo "<tr class='$classe'>";
-    echo "<td>{$p['nome']}</td>";
-    echo "<td>{$p['preco']}</td>";
-    echo "<td>{$p['categoria']}</td>";
-    echo "</tr>";
+     echo "<tr class='$classe'>";
+     echo "<td>{$p['nome']}</td>";
+     echo "<td>{$p['preco']}</td>";
+     echo "<td>{$p['categoria']}</td>";
+     echo "</tr>";
 }
 
 echo "</table>";
