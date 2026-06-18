@@ -17,11 +17,11 @@
     
     //ex3  
     function calcularAutonomia($capacidadeBateria, $consumoPorMinuto){
-        
-        return"Tempo estimado de voo:  minutos.";
+       return $tempo = $capacidadeBateria/$consumoPorMinuto;
+        return $tempo;
     }
-    $retorno = msg("carol");
-    echo $retorno;
+    $retorno = calcularAutonomia(100, 5);
+    echo "tempo estimado de voo: $retorno minutos";
 
     //ex4 
      echo "<br> <hr>";
@@ -33,8 +33,22 @@
             echo"senha incorreta";
         }
     }
-    verificarAcesso(12345)
+    verificarAcesso(12345);
 
+    //ex5
+    echo "<br> <hr>";
+    function calcularMediaTemperatura($listaDeTemperaturas){   
+    $soma=0;
+    foreach ($listaDeTemperaturas as $temperatura ) {
+        $soma += $temperatura;
+    }
+    $qntde = count($listaDeTemperaturas);
+    $media = $soma/$qntde;
+    return $media;
+    
+    }
+    echo calcularMediaTemperatura([10, 20, 13]);
+     
 
 
 
